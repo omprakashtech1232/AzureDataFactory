@@ -1,0 +1,15 @@
+{
+	"name": "om1-azure-data-factory-01",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1071689c-a879-44b7-a808-8e7c48c8a3ab",
+		"tenantId": "ccfc86b0-6b97-4a96-ba04-876dd7592f93"
+	}
+}
