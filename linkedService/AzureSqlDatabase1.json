@@ -5,13 +5,13 @@
 		"annotations": [],
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
-			"server": "demo-databeli-om1232.database.windows.net",
-			"database": "Demo_SQL_DB",
+			"server": "demo-om-server.database.windows.net",
+			"database": "free-sql-db-4296201",
 			"encrypt": "mandatory",
 			"trustServerCertificate": false,
 			"authenticationType": "SQL",
-			"userName": "demodatabeli",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEVGMDU0QTFCLUJBMkItNDhERS1BRjExLTk0OEIzOEY4NDFBMV85ODU1Mjc0OS05OTYxLTRmYTAtOWYxOS03NjI0ZmI1ZDMzYTUiDQp9"
+			"userName": "om1232",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDU5QjM0Qjk4LTNDRjItNERFOS1BNjE4LTg4ODRDQjkxNzg5OF84ZWI4ODkxMy0zMTgwLTQyMDktOTEzNS1lYzYyMGYzN2I1ZDIiDQp9"
 		}
 	}
 }

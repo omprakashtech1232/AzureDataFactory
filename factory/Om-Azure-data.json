@@ -1,0 +1,15 @@
+{
+	"name": "Om-Azure-data",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "68185128-d659-45d7-a963-71190d593ed6",
+		"tenantId": "ccfc86b0-6b97-4a96-ba04-876dd7592f93"
+	}
+}
