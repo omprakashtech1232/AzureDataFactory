@@ -1,0 +1,17 @@
+{
+	"name": "AzureSqlDatabaseout",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "om-sql-server-demo.database.windows.net",
+			"database": "free-sql-dbom",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "om1232",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDVDQ0FFQUJDLTQxNjEtNEZDNC04NDU3LUIzRjUzQzUyOTYwMl9hNjMwNDQxZC0zNTNhLTRjZjctOTYyNi03YzA4ZTcwNzFkN2QiDQp9"
+		}
+	}
+}

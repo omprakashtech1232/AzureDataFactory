@@ -1,0 +1,36 @@
+{
+	"name": "pipeline2",
+	"properties": {
+		"activities": [
+			{
+				"name": "email",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"url": "https://prod-11.westus2.logic.azure.com:443/workflows/b4012258cd4b47b98a888f4cb1b08350/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=VuXUOflUWhhAQQhx3ZLZ9ArY94gR2kQ03qOr3piG-28",
+					"body": {
+						"value": "{\n  \"table_name\": \"@{pipeline().parameters.table_name}\"\n}",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"table_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-10-16T02:24:07Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

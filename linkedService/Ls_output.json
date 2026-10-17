@@ -1,0 +1,11 @@
+{
+	"name": "Ls_output",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureTableStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://omstorageoutput.table.core.windows.net/"
+		}
+	}
+}
