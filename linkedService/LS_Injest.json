@@ -1,0 +1,14 @@
+{
+	"name": "LS_Injest",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "om-sql-server-demo.database.windows.net",
+			"database": "free-sql-dbom",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SystemAssignedManagedIdentity"
+		}
+	}
+}
