@@ -22,12 +22,24 @@
 					},
 					"dataset": {
 						"referenceName": "DS_Azure_data",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"schema": "dbo",
+							"table_name": {
+								"value": "@pipeline().parameters.tableName",
+								"type": "Expression"
+							}
+						}
 					},
 					"firstRowOnly": false
 				}
 			}
 		],
+		"parameters": {
+			"tableName": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
