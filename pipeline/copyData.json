@@ -47,7 +47,10 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"schema": "dbo",
-							"table_name": "Customers"
+							"table_name": {
+								"value": "@pipeline().parameters.tableName",
+								"type": "Expression"
+							}
 						}
 					}
 				],
@@ -56,12 +59,20 @@
 						"referenceName": "DS_LS_output",
 						"type": "DatasetReference",
 						"parameters": {
-							"table_name": "Customers"
+							"table_name": {
+								"value": "@pipeline().parameters.tableName",
+								"type": "Expression"
+							}
 						}
 					}
 				]
 			}
 		],
+		"parameters": {
+			"tableName": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
