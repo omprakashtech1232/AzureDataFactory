@@ -44,13 +44,29 @@
 				"inputs": [
 					{
 						"referenceName": "DS_Azure_data",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"schema": {
+								"value": "@dataset().schema",
+								"type": "Expression"
+							},
+							"table_name": {
+								"value": "@dataset().table_name",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "DS_LS_output",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"table_name": {
+								"value": "@dataset().table_name",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
