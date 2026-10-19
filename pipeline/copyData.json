@@ -46,14 +46,8 @@
 						"referenceName": "DS_Azure_data",
 						"type": "DatasetReference",
 						"parameters": {
-							"schema": {
-								"value": "@dataset().schema",
-								"type": "Expression"
-							},
-							"table_name": {
-								"value": "@dataset().table_name",
-								"type": "Expression"
-							}
+							"schema": "dbo",
+							"table_name": "Customers"
 						}
 					}
 				],
@@ -62,10 +56,7 @@
 						"referenceName": "DS_LS_output",
 						"type": "DatasetReference",
 						"parameters": {
-							"table_name": {
-								"value": "@dataset().table_name",
-								"type": "Expression"
-							}
+							"table_name": "Customers"
 						}
 					}
 				]
