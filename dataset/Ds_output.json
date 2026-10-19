@@ -1,0 +1,20 @@
+{
+	"name": "Ds_output",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureTableStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"schema": {
+				"type": "string"
+			},
+			"table_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureTable",
+		"schema": []
+	}
+}
