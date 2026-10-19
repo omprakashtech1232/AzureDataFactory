@@ -49,7 +49,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DS_LS_output",
+						"referenceName": "DS_outpu_ADLS",
 						"type": "DatasetReference"
 					}
 				]
