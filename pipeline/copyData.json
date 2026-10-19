@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "CopyFromAzureToBlobStorage",
+				"name": "Copy data1",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -44,10 +44,7 @@
 				"inputs": [
 					{
 						"referenceName": "DS_Azure_data",
-						"type": "DatasetReference",
-						"parameters": {
-							"schema": "dbo"
-						}
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
