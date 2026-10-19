@@ -1,8 +1,0 @@
-{
-	"name": "Ds_output",
-	"properties": {
-		"annotations": [],
-		"type": "AzureTable",
-		"schema": []
-	}
-}
