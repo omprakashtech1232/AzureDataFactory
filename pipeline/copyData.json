@@ -44,7 +44,10 @@
 				"inputs": [
 					{
 						"referenceName": "DS_Azure_data",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"schema": "dbo"
+						}
 					}
 				],
 				"outputs": [
