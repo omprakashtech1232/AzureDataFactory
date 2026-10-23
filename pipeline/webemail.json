@@ -4,6 +4,7 @@
 		"activities": [
 			{
 				"name": "Webemail",
+				"description": "{\"receipent\":\"om33993267@gmail.com\",\n  \"table_name\":\"Customers\",\n  \"Body\":\"Email has been send successfully\",\n  \"subject\":\"email sucess or fail\"",
 				"type": "WebActivity",
 				"dependsOn": [],
 				"policy": {
