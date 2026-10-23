@@ -6,7 +6,14 @@
 				"name": "Webemail",
 				"description": "{\"receipent\":\"om33993267@gmail.com\",\n  \"table_name\":\"Customers\",\n  \"Body\":\"Email has been send successfully\",\n  \"subject\":\"email sucess or fail\"",
 				"type": "WebActivity",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -26,11 +33,98 @@
 						"type": "Expression"
 					}
 				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "email subject",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "bodyofEmail",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "logic_app_complete_body",
+					"value": {
+						"value": "@variables('logic_app_complete_body')",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "email subject",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "emailStatus",
+					"value": {
+						"value": "@{pipeline().parameters.table_name}-@{pipeline().parameters.Status}",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "bodyofEmail",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "setEmailboldy",
+					"value": {
+						"value": "the table_name @{pipeline().parameters.table_name} has been successfully insted and status is @{pipeline().parameters.Status}",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
 			"table_name": {
 				"type": "string"
+			},
+			"receipent": {
+				"type": "string"
+			},
+			"Status": {
+				"type": "string"
+			}
+		},
+		"variables": {
+			"email": {
+				"type": "String"
+			},
+			"email_status": {
+				"type": "String"
+			},
+			"logic_app_complete_body": {
+				"type": "String"
+			},
+			"emailStatus": {
+				"type": "String"
+			},
+			"setEmailboldy": {
+				"type": "String"
 			}
 		},
 		"annotations": []
