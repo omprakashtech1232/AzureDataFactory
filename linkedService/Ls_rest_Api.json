@@ -1,0 +1,12 @@
+{
+	"name": "Ls_rest_Api",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://www.quickpickdeal.com/api/Customer/GetAllCustomers",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
