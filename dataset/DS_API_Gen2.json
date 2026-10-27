@@ -1,0 +1,19 @@
+{
+	"name": "DS_API_Gen2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Customers",
+				"fileSystem": "Raw"
+			}
+		},
+		"schema": {}
+	}
+}
