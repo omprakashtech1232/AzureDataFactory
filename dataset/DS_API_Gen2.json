@@ -10,8 +10,12 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "Customers",
-				"fileSystem": "Raw"
+				"fileName": {
+					"value": "@concat('Customers_', formatDateTime(utcNow(),'yyyyMMddHHmmss'), '.json')",
+					"type": "Expression"
+				},
+				"folderPath": "customers",
+				"fileSystem": "raw"
 			}
 		},
 		"schema": {}
