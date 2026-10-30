@@ -127,7 +127,7 @@
 												"type": "DatasetReference",
 												"parameters": {
 													"outfile": {
-														"value": "@item().name",
+														"value": "@item().outfile",
 														"type": "Expression"
 													}
 												}
