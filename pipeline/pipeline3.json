@@ -21,7 +21,7 @@
 					},
 					"activities": [
 						{
-							"name": "If Condition1",
+							"name": "If Condition1_copy1",
 							"type": "IfCondition",
 							"dependsOn": [],
 							"userProperties": [],
@@ -32,7 +32,7 @@
 								},
 								"ifTrueActivities": [
 									{
-										"name": "Copy data1",
+										"name": "Copy data1_copy1",
 										"type": "Copy",
 										"dependsOn": [],
 										"policy": {
