@@ -71,7 +71,11 @@
 											"secureOutput": false,
 											"secureInput": false
 										},
-										"userProperties": [],
+										"userProperties": [
+											{
+												"name": "p.filename"
+											}
+										],
 										"typeProperties": {
 											"source": {
 												"type": "DelimitedTextSource",
@@ -108,13 +112,25 @@
 										"inputs": [
 											{
 												"referenceName": "Copy_CSV",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"file_name": {
+														"value": "@item().name",
+														"type": "Expression"
+													}
+												}
 											}
 										],
 										"outputs": [
 											{
 												"referenceName": "Copy_CSV_d",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"outfile": {
+														"value": "@item().file_name",
+														"type": "Expression"
+													}
+												}
 											}
 										]
 									}
