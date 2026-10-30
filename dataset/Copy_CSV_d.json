@@ -5,11 +5,20 @@
 			"referenceName": "Ls_copyCSV",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"outfile": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().outfile",
+					"type": "Expression"
+				},
 				"folderPath": "output",
 				"fileSystem": "om-container"
 			},
