@@ -56,7 +56,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@item().itemName",
+									"value": "@startswith(item().name,'delhi')",
 									"type": "Expression"
 								},
 								"ifTrueActivities": [
@@ -108,13 +108,25 @@
 										"inputs": [
 											{
 												"referenceName": "DS_gen2",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"file_name": {
+														"value": "@item().name",
+														"type": "Expression"
+													}
+												}
 											}
 										],
 										"outputs": [
 											{
 												"referenceName": "DS_reportingCsv",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"file_name": {
+														"value": "@item().name",
+														"type": "Expression"
+													}
+												}
 											}
 										]
 									}
