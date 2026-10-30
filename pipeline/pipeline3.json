@@ -27,7 +27,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@startswith(item().name,'delhi')",
+									"value": "@startswith(toLower(item().name),'delhi')",
 									"type": "Expression"
 								},
 								"ifTrueActivities": [
