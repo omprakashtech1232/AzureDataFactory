@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "om-adf-demo"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
 		"AzureDataLakeStorage2_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
@@ -26,6 +30,10 @@
 		"CopyGen2Reporting_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'CopyGen2Reporting'"
+		},
+		"LS_BlobStorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_BlobStorage'"
 		},
 		"LS_Copy_CSV_accountKey": {
 			"type": "secureString",
@@ -51,6 +59,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_inputBob'"
 		},
+		"LS_sqlServer_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_sqlServer'"
+		},
 		"Ls_Git_out_CSV_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'Ls_Git_out_CSV'"
@@ -62,18 +74,6 @@
 		"Ls_outs_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Ls_outs'"
-		},
-		"AzureBlobStorage1_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
-		},
-		"LS_BlobStorage_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'LS_BlobStorage'"
-		},
-		"LS_sqlServer_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'LS_sqlServer'"
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
@@ -127,18 +127,6 @@
 			"type": "string",
 			"defaultValue": "https://omstorageac.dfs.core.windows.net/"
 		},
-		"Ls_Git_out_CSV_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://omstorageac.dfs.core.windows.net/"
-		},
-		"Ls_copyCSV_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://omstorageac.dfs.core.windows.net/"
-		},
-		"Ls_rest_Api_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://www.quickpickdeal.com/api/Customer/GetAllCustomers"
-		},
 		"LS_sqlServer_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "om-sql-server-demo.database.windows.net"
@@ -150,6 +138,18 @@
 		"LS_sqlServer_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "om1232"
+		},
+		"Ls_Git_out_CSV_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"Ls_copyCSV_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"Ls_rest_Api_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://www.quickpickdeal.com/api/Customer/GetAllCustomers"
 		},
 		"containerUri": {
 			"type": "string",
@@ -178,6 +178,9 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
 					"AzureDataLakeStorage2_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
 					},
@@ -192,6 +195,9 @@
 					},
 					"CopyGen2Reporting_accountKey": {
 						"value": "[parameters('CopyGen2Reporting_accountKey')]"
+					},
+					"LS_BlobStorage_connectionString": {
+						"value": "[parameters('LS_BlobStorage_connectionString')]"
 					},
 					"LS_Copy_CSV_accountKey": {
 						"value": "[parameters('LS_Copy_CSV_accountKey')]"
@@ -211,6 +217,9 @@
 					"LS_inputBob_connectionString": {
 						"value": "[parameters('LS_inputBob_connectionString')]"
 					},
+					"LS_sqlServer_password": {
+						"value": "[parameters('LS_sqlServer_password')]"
+					},
 					"Ls_Git_out_CSV_accountKey": {
 						"value": "[parameters('Ls_Git_out_CSV_accountKey')]"
 					},
@@ -219,12 +228,6 @@
 					},
 					"Ls_outs_connectionString": {
 						"value": "[parameters('Ls_outs_connectionString')]"
-					},
-					"AzureBlobStorage1_connectionString": {
-						"value": "[parameters('AzureBlobStorage1_connectionString')]"
-					},
-					"LS_BlobStorage_connectionString": {
-						"value": "[parameters('LS_BlobStorage_connectionString')]"
 					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
@@ -265,14 +268,20 @@
 					"LS_outputService_properties_typeProperties_url": {
 						"value": "[parameters('LS_outputService_properties_typeProperties_url')]"
 					},
+					"LS_sqlServer_properties_typeProperties_server": {
+						"value": "[parameters('LS_sqlServer_properties_typeProperties_server')]"
+					},
+					"LS_sqlServer_properties_typeProperties_database": {
+						"value": "[parameters('LS_sqlServer_properties_typeProperties_database')]"
+					},
+					"LS_sqlServer_properties_typeProperties_userName": {
+						"value": "[parameters('LS_sqlServer_properties_typeProperties_userName')]"
+					},
 					"Ls_Git_out_CSV_properties_typeProperties_url": {
 						"value": "[parameters('Ls_Git_out_CSV_properties_typeProperties_url')]"
 					},
 					"Ls_copyCSV_properties_typeProperties_url": {
 						"value": "[parameters('Ls_copyCSV_properties_typeProperties_url')]"
-					},
-					"Ls_rest_Api_properties_typeProperties_url": {
-						"value": "[parameters('Ls_rest_Api_properties_typeProperties_url')]"
 					}
 				}
 			},
@@ -292,17 +301,8 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"LS_sqlServer_password": {
-						"value": "[parameters('LS_sqlServer_password')]"
-					},
-					"LS_sqlServer_properties_typeProperties_server": {
-						"value": "[parameters('LS_sqlServer_properties_typeProperties_server')]"
-					},
-					"LS_sqlServer_properties_typeProperties_database": {
-						"value": "[parameters('LS_sqlServer_properties_typeProperties_database')]"
-					},
-					"LS_sqlServer_properties_typeProperties_userName": {
-						"value": "[parameters('LS_sqlServer_properties_typeProperties_userName')]"
+					"Ls_rest_Api_properties_typeProperties_url": {
+						"value": "[parameters('Ls_rest_Api_properties_typeProperties_url')]"
 					}
 				}
 			},
