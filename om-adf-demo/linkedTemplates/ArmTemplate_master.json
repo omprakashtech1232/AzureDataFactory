@@ -7,15 +7,103 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "om-adf-demo"
 		},
+		"AzureDataLakeStorage2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
+		},
+		"AzureDataLakeStorage3_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage3'"
+		},
+		"AzureDataLakeStorage4_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage4'"
+		},
 		"AzureTableStorage1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureTableStorage1'"
+		},
+		"CopyGen2Reporting_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'CopyGen2Reporting'"
+		},
+		"LS_Copy_CSV_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Copy_CSV'"
+		},
+		"LS_Geng_to_reporting_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Geng_to_reporting'"
 		},
 		"LS_Injest_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'LS_Injest'"
 		},
+		"LS_Out_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Out'"
+		},
+		"LS_input_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_input'"
+		},
+		"LS_inputBob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_inputBob'"
+		},
+		"Ls_Git_out_CSV_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'Ls_Git_out_CSV'"
+		},
+		"Ls_copyCSV_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'Ls_copyCSV'"
+		},
+		"Ls_outs_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Ls_outs'"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"LS_BlobStorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_BlobStorage'"
+		},
+		"LS_sqlServer_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_sqlServer'"
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage4_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"CopyGen2Reporting_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"HttpLSGit_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://github.com"
+		},
+		"LS_Copy_CSV_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"LS_Geng_to_reporting_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://omstorageac.dfs.core.windows.net/"
 		},
@@ -31,9 +119,37 @@
 			"type": "string",
 			"defaultValue": "om1232"
 		},
+		"LS_Out_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://omstorageac.dfs.core.windows.net/"
+		},
 		"LS_outputService_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"Ls_Git_out_CSV_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"Ls_copyCSV_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"Ls_rest_Api_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://www.quickpickdeal.com/api/Customer/GetAllCustomers"
+		},
+		"LS_sqlServer_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "om-sql-server-demo.database.windows.net"
+		},
+		"LS_sqlServer_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "free-sql-dbom"
+		},
+		"LS_sqlServer_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "om1232"
 		},
 		"containerUri": {
 			"type": "string",
@@ -62,14 +178,77 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureDataLakeStorage2_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
+					},
+					"AzureDataLakeStorage3_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage3_accountKey')]"
+					},
+					"AzureDataLakeStorage4_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage4_accountKey')]"
+					},
 					"AzureTableStorage1_connectionString": {
 						"value": "[parameters('AzureTableStorage1_connectionString')]"
+					},
+					"CopyGen2Reporting_accountKey": {
+						"value": "[parameters('CopyGen2Reporting_accountKey')]"
+					},
+					"LS_Copy_CSV_accountKey": {
+						"value": "[parameters('LS_Copy_CSV_accountKey')]"
+					},
+					"LS_Geng_to_reporting_accountKey": {
+						"value": "[parameters('LS_Geng_to_reporting_accountKey')]"
 					},
 					"LS_Injest_password": {
 						"value": "[parameters('LS_Injest_password')]"
 					},
+					"LS_Out_accountKey": {
+						"value": "[parameters('LS_Out_accountKey')]"
+					},
+					"LS_input_connectionString": {
+						"value": "[parameters('LS_input_connectionString')]"
+					},
+					"LS_inputBob_connectionString": {
+						"value": "[parameters('LS_inputBob_connectionString')]"
+					},
+					"Ls_Git_out_CSV_accountKey": {
+						"value": "[parameters('Ls_Git_out_CSV_accountKey')]"
+					},
+					"Ls_copyCSV_accountKey": {
+						"value": "[parameters('Ls_copyCSV_accountKey')]"
+					},
+					"Ls_outs_connectionString": {
+						"value": "[parameters('Ls_outs_connectionString')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"LS_BlobStorage_connectionString": {
+						"value": "[parameters('LS_BlobStorage_connectionString')]"
+					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage2_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage2_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage3_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage3_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage4_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage4_properties_typeProperties_url')]"
+					},
+					"CopyGen2Reporting_properties_typeProperties_url": {
+						"value": "[parameters('CopyGen2Reporting_properties_typeProperties_url')]"
+					},
+					"HttpLSGit_properties_typeProperties_url": {
+						"value": "[parameters('HttpLSGit_properties_typeProperties_url')]"
+					},
+					"LS_Copy_CSV_properties_typeProperties_url": {
+						"value": "[parameters('LS_Copy_CSV_properties_typeProperties_url')]"
+					},
+					"LS_Geng_to_reporting_properties_typeProperties_url": {
+						"value": "[parameters('LS_Geng_to_reporting_properties_typeProperties_url')]"
 					},
 					"LS_Injest_properties_typeProperties_server": {
 						"value": "[parameters('LS_Injest_properties_typeProperties_server')]"
@@ -80,12 +259,56 @@
 					"LS_Injest_properties_typeProperties_userName": {
 						"value": "[parameters('LS_Injest_properties_typeProperties_userName')]"
 					},
+					"LS_Out_properties_typeProperties_url": {
+						"value": "[parameters('LS_Out_properties_typeProperties_url')]"
+					},
 					"LS_outputService_properties_typeProperties_url": {
 						"value": "[parameters('LS_outputService_properties_typeProperties_url')]"
+					},
+					"Ls_Git_out_CSV_properties_typeProperties_url": {
+						"value": "[parameters('Ls_Git_out_CSV_properties_typeProperties_url')]"
+					},
+					"Ls_copyCSV_properties_typeProperties_url": {
+						"value": "[parameters('Ls_copyCSV_properties_typeProperties_url')]"
+					},
+					"Ls_rest_Api_properties_typeProperties_url": {
+						"value": "[parameters('Ls_rest_Api_properties_typeProperties_url')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "om-adf-demo_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_sqlServer_password": {
+						"value": "[parameters('LS_sqlServer_password')]"
+					},
+					"LS_sqlServer_properties_typeProperties_server": {
+						"value": "[parameters('LS_sqlServer_properties_typeProperties_server')]"
+					},
+					"LS_sqlServer_properties_typeProperties_database": {
+						"value": "[parameters('LS_sqlServer_properties_typeProperties_database')]"
+					},
+					"LS_sqlServer_properties_typeProperties_userName": {
+						"value": "[parameters('LS_sqlServer_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'om-adf-demo_ArmTemplate_0')]"
+			]
 		}
 	]
 }

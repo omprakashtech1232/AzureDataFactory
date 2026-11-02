@@ -5,13 +5,79 @@
 		"factoryName": {
 			"value": "om-adf-demo"
 		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage3_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage4_accountKey": {
+			"value": ""
+		},
 		"AzureTableStorage1_connectionString": {
+			"value": ""
+		},
+		"CopyGen2Reporting_accountKey": {
+			"value": ""
+		},
+		"LS_Copy_CSV_accountKey": {
+			"value": ""
+		},
+		"LS_Geng_to_reporting_accountKey": {
 			"value": ""
 		},
 		"LS_Injest_password": {
 			"value": ""
 		},
+		"LS_Out_accountKey": {
+			"value": ""
+		},
+		"LS_input_connectionString": {
+			"value": ""
+		},
+		"LS_inputBob_connectionString": {
+			"value": ""
+		},
+		"Ls_Git_out_CSV_accountKey": {
+			"value": ""
+		},
+		"Ls_copyCSV_accountKey": {
+			"value": ""
+		},
+		"Ls_outs_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"LS_BlobStorage_connectionString": {
+			"value": ""
+		},
+		"LS_sqlServer_password": {
+			"value": ""
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"value": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage4_properties_typeProperties_url": {
+			"value": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"CopyGen2Reporting_properties_typeProperties_url": {
+			"value": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"HttpLSGit_properties_typeProperties_url": {
+			"value": "https://github.com"
+		},
+		"LS_Copy_CSV_properties_typeProperties_url": {
+			"value": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"LS_Geng_to_reporting_properties_typeProperties_url": {
 			"value": "https://omstorageac.dfs.core.windows.net/"
 		},
 		"LS_Injest_properties_typeProperties_server": {
@@ -23,8 +89,29 @@
 		"LS_Injest_properties_typeProperties_userName": {
 			"value": "om1232"
 		},
+		"LS_Out_properties_typeProperties_url": {
+			"value": "https://omstorageac.dfs.core.windows.net/"
+		},
 		"LS_outputService_properties_typeProperties_url": {
 			"value": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"Ls_Git_out_CSV_properties_typeProperties_url": {
+			"value": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"Ls_copyCSV_properties_typeProperties_url": {
+			"value": "https://omstorageac.dfs.core.windows.net/"
+		},
+		"Ls_rest_Api_properties_typeProperties_url": {
+			"value": "https://www.quickpickdeal.com/api/Customer/GetAllCustomers"
+		},
+		"LS_sqlServer_properties_typeProperties_server": {
+			"value": "om-sql-server-demo.database.windows.net"
+		},
+		"LS_sqlServer_properties_typeProperties_database": {
+			"value": "free-sql-dbom"
+		},
+		"LS_sqlServer_properties_typeProperties_userName": {
+			"value": "om1232"
 		}
 	}
 }
