@@ -1,0 +1,22 @@
+{
+	"name": "ds_out_join_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Blob_Cust_csv",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "outputjson"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

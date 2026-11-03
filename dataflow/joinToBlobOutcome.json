@@ -1,0 +1,68 @@
+{
+	"name": "joinToBlobOutcome",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Ds_cust_merge",
+						"type": "DatasetReference"
+					},
+					"name": "Employee"
+				},
+				{
+					"dataset": {
+						"referenceName": "DS_depart_Csv",
+						"type": "DatasetReference"
+					},
+					"name": "Department"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ds_out_join_csv",
+						"type": "DatasetReference"
+					},
+					"name": "blobJoinoutcome"
+				}
+			],
+			"transformations": [
+				{
+					"name": "join1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          emp_id as string,",
+				"          name as string,",
+				"          salary as string,",
+				"          address as string,",
+				"          loc as string,",
+				"          email as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> Employee",
+				"source(output(",
+				"          user as string,",
+				"          department as string,",
+				"          designation as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> Department",
+				"Employee, Department join(emp_id == user,",
+				"     joinType:'left',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> join1",
+				"join1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> blobJoinoutcome"
+			]
+		}
+	}
+}
