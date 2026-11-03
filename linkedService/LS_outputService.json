@@ -1,0 +1,11 @@
+{
+	"name": "LS_outputService",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://omstorageac.dfs.core.windows.net/"
+		}
+	}
+}
