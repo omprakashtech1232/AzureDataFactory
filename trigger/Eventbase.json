@@ -13,10 +13,8 @@
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/input/blobs/",
-			"blobPathEndsWith": ".csv",
 			"ignoreEmptyBlobs": true,
-			"scope": "/subscriptions/50f485d5-a516-4fe7-9256-353ea92d7149/resourceGroups/ADf/providers/Microsoft.Storage/storageAccounts/omstorage112",
+			"scope": "/subscriptions/50f485d5-a516-4fe7-9256-353ea92d7149/resourceGroups/ADf/providers/Microsoft.Storage/storageAccounts/omstorageac",
 			"events": [
 				"Microsoft.Storage.BlobCreated"
 			]
