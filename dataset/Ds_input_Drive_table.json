@@ -1,0 +1,40 @@
+{
+	"name": "Ds_input_Drive_table",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DS_input_blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "emp_1.csv",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "month ",
+				"type": "String"
+			},
+			{
+				"name": "sales",
+				"type": "String"
+			},
+			{
+				"name": "profit",
+				"type": "String"
+			},
+			{
+				"name": "location",
+				"type": "String"
+			}
+		]
+	}
+}
