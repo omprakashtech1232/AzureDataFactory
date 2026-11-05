@@ -1,0 +1,40 @@
+{
+	"name": "ds_transform",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Ds_input_cust1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          emp_id as string,",
+				"          name as string,",
+				"          salary as integer,",
+				"          address as string,",
+				"          loc as string,",
+				"          email as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 derive(name = iif(isNull(name),'unknown',name),",
+				"          salary = iif(isNull(salary),10000, salary),",
+				"          Country = upper(Country),",
+				"          column1 = ERROR_FUNCTION('')) ~> derivedColumn1"
+			]
+		}
+	}
+}
