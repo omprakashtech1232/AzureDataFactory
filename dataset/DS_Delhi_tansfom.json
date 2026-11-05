@@ -2,7 +2,7 @@
 	"name": "DS_Delhi_tansfom",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "Ls_outs",
+			"referenceName": "Ls_output",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
