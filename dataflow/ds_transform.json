@@ -12,7 +12,15 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ransformation18",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
 			"transformations": [
 				{
 					"name": "derivedColumn1"
@@ -32,8 +40,17 @@
 				"     ignoreNoFilesFound: false) ~> source1",
 				"source1 derive(name = iif(isNull(name),'unknown',name),",
 				"          salary = iif(isNull(salary),10000, salary),",
-				"          Country = upper(Country),",
-				"          column1 = ERROR_FUNCTION('')) ~> derivedColumn1"
+				"          Country = upper(address),",
+				"          column1 = ERROR_FUNCTION('')) ~> derivedColumn1",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          sales as string,",
+				"          profit as string,",
+				"          location as string",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
 		}
 	}
