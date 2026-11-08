@@ -1,0 +1,34 @@
+{
+	"name": "Json1_multifile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "outputjson"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"emp_id": {
+					"type": "integer"
+				},
+				"name": {
+					"type": "string"
+				},
+				"salary": {
+					"type": "integer"
+				},
+				"address": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
