@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"storedProcedureName": "[dbo].[emp_delete]",
 					"storedProcedureParameters": {
-						"id": {
+						"ID": {
 							"value": {
 								"value": "@pipeline().parameters.id",
 								"type": "Expression"
