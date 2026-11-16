@@ -14,6 +14,18 @@
 					},
 					"activities": [
 						{
+							"name": "If Condition1",
+							"type": "IfCondition",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"expression": {
+									"value": "@bool(pipeline().parameters.file_exit)",
+									"type": "Expression"
+								}
+							}
+						},
+						{
 							"name": "Get Metadata1",
 							"type": "GetMetadata",
 							"dependsOn": [],
@@ -27,7 +39,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"dataset": {
-									"referenceName": "Ds_input_file_blob",
+									"referenceName": "Ds_input_File",
 									"type": "DatasetReference"
 								},
 								"fieldList": [
@@ -49,7 +61,8 @@
 		],
 		"parameters": {
 			"file_exit": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "false"
 			}
 		},
 		"annotations": []
