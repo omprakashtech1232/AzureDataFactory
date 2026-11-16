@@ -59,9 +59,9 @@
 				}
 			}
 		],
-		"parameters": {
-			"file_exit": {
-				"type": "string",
+		"variables": {
+			"file_exist": {
+				"type": "String",
 				"defaultValue": "false"
 			}
 		},
