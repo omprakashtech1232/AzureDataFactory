@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "delhi_csv.csv",
 				"container": "imput"
 			},
 			"columnDelimiter": ",",
