@@ -14,7 +14,7 @@
 					},
 					"cases": [
 						{
-							"value": "Case2",
+							"value": "Delhi_csv",
 							"activities": [
 								{
 									"name": "Copy data1",
@@ -75,9 +75,18 @@
 									]
 								}
 							]
-						},
+						}
+					],
+					"defaultActivities": [
 						{
-							"value": "Case2"
+							"name": "Fail1",
+							"type": "Fail",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"message": "unknown file",
+								"errorCode": "1001"
+							}
 						}
 					]
 				}
